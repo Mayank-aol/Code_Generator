@@ -1,0 +1,47 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<div class="SignIn col-md-6">
+    <form action="Operation_Selector" method="post"> {% csrf_token %}
+        <table>
+            <tr>
+                <td>
+                    <label for="id_work_env">Choose Environment: </label>
+                </td>
+                <td>
+                    <select name="env" id="id_work_env">
+                        <option value="null">--Select TeraData Environment--</option>
+                        <option value="tddev.us.dell.com">TDDEV</option>
+                        <option value="tddev2cop1.us.dell.com">TDDEV_CANADA</option>
+                        <option value="tdsit.us.dell.com">TDSIT</option>
+                        <option value="tdprod1.us.dell.com">TDPROD1</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="id_username"> UserName: </label>
+                </td>
+                <td>
+                    <input type="text" name="username" id="id_username" placeholder="Enter your UserName">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="id_pswd">Password: </label>
+                </td>
+                <td>
+                    <input type="password" name="password" id="id_pswd" placeholder="Enter your Password">
+                </td>
+            </tr>
+        </table>
+<!--        <button type="button" id="id_sign_in">LogIn to Teradata</button>-->
+         <input type="submit" value="Log In to Teradata" id="id_sign_in">
+    </form>
+</div>
+  {% for message in messages %}
+        <div class = "Message col-md-8 container" >
+              <h3 class="text-center">{{message}}</h3>
+        </div>
+  {% endfor %}
+{% endblock %}

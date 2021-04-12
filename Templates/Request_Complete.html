@@ -1,0 +1,14 @@
+{% extends 'header.html' %}
+
+{% block content %}
+<div class="req_complete col-md-8">
+    <h1 class = "text-center">!!! Request Completed !!!</h1>
+    <div class="home_logout">
+        <ul>
+            <li><a href="{% url 'Redirect' %}">Back to Operation Selector</a></li>
+            <li><a href="{% url 'Download_Package' %}">Download Package</a></li>
+            <li><a href="{% url 'LogOut' %}">Log Out from Teradata</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

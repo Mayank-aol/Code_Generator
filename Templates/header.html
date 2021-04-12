@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Generator</title>
+    <link rel="shortcut icon" href="{% static 'img/DELL_LOGO.png' %}" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'CSS/Designs.css' %}">
+</head>
+
+<body>
+    <div class="header">
+        <div class="col-md-4 logo">
+            <img src="{% static 'img/dell_white.png' %}" alt="">
+        </div>
+        <div class="col-md-4 head">
+            <h1><b>Code Generator </b></h1>
+        </div>
+        <div class="col-md-4 help_button">
+            <ul>
+                <li><a href="#contact_us"> Contact Us</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+
+<!--    <script src="{% static 'JavaScript/login.js' %}"></script>-->
+    <script src="{% static 'JavaScript/project.js' %}"></script>
+    <script src="{% static 'JavaScript/end_layer.js' %}"></script>
+    <script src="{% static 'JavaScript/col_dtls.js' %}"></script>
+    <!-- <script src="./validate_inputs.js"></script> -->
+    <!-- <script src="./chng_typ_dtl.js"></script> -->
+</body>
+</html>

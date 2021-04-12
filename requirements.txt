@@ -1,0 +1,7 @@
+--index-url https://dcsartifacts.dell.com/artifactory/api/pypi/python/simple/ --trusted-host dcsartifacts.dell.com
+Django~=3.1.5
+teradatasql~=17.0.0.8
+pandas~=1.2.0
+whitenoise~=5.2.0
+openpyxl~=3.0.6
+dj-static~=0.0.6

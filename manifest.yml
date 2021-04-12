@@ -1,0 +1,10 @@
+---
+applications:
+- name: Code_Generator
+  health-check-type: none
+  buildpack: dicf_python_buildpack_1727_cflinuxfs3
+  instances: 1
+  memory: 1G
+  disk-quota: 1G
+  route: codegenerator.r3.pcf.dell.com
+  command: python manage.py runserver --insecure 0.0.0.0:$PORT

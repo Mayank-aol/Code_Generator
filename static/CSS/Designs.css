@@ -1,0 +1,305 @@
+body{
+    background-color: #1B9CFC;
+    width: 100%;
+    height: auto;
+    /* overflow: scroll;
+    overflow-x: hidden; */
+    /* overflow: hidden; */
+}
+
+.header{
+    /* border: solid 2px wheat; */
+    height: 30vh;
+}
+
+.logo img{
+    width: 40%;
+    height: 40%;
+}
+
+.head{
+    margin: 5% 0;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: 'Bree Serif', serif;
+    
+    letter-spacing: .15em;
+    /* border: solid 2px wheat; */
+
+    
+}
+
+/* .head:hover{
+    font-family: 'Righteous', cursive;
+
+} */
+
+.help_button{
+    margin: 5.5% 0;
+    color: white;
+}
+
+.help_button ul{
+    list-style: none;
+    margin-left: 50%;
+    
+}
+
+.help_button a{
+    color: white;
+    float: left;
+    border: solid 2px white;
+    background-color:  #4b4b4b;
+    border-radius: 20%;
+    margin: 2%;
+    padding: 2% 5%;
+    text-decoration: none;
+}
+
+.help_button a:hover{
+    background-color: #4b4b4b ;
+    /* font-weight: bold; */
+    color:#1B9CFC ;
+   
+}
+
+.SignIn{
+    margin: 0.5% 25%;
+    padding: 2% 5%;
+    /* width: 40%; */
+    height: auto;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+
+.Message{
+    margin: 0.5% 17%;
+    padding: 2% 5%;
+    height: auto;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+
+div.SignIn form table label{
+    /* font-weight: bold; */
+    font-size: large;
+    color: white;
+
+}
+
+div.SignIn form table tr td select{
+    margin: 0 10%;
+
+}
+
+div.SignIn form table tr td input{
+    margin: 0 10%;
+}
+
+div.SignIn form button#id_sign_in{
+    border-radius: 10%;
+}
+
+div.Message h3{
+    color: white;
+}
+
+
+div.SignIn form input#id_sign_in:hover{
+    background-color: #313131;
+    color: blanchedalmond;
+}
+
+.Code_Generator{
+    /* width: 30%; */
+    margin: 0.5% 25%;
+    padding: 2% 5%;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+
+div.Code_Generator form table label{
+    /* font-weight: bold; */
+    font-size: large;
+    color: white;
+
+}
+
+div.Code_Generator form table tr td select{
+    margin: 0 20%;
+
+}
+
+div.Code_Generator form button#id_code_generator{
+    border-radius: 10%;
+}
+
+div.Code_Generator form input#id_code_generator:hover{
+    background-color: #313131;
+    color: blanchedalmond;
+}
+
+
+.Upload_src{
+    margin: 0.5% 25%;
+    padding: 2% 5%;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+
+div.Upload_src form table label {
+    /* font-weight: bold; */
+    font-size: medium;
+    color: white;
+}
+
+div.Upload_src form input#id_num_cols{
+    border-radius: 10%;
+}
+
+div.Upload_src form input#id_num_cols:hover{
+    background-color: #313131;
+    color: blanchedalmond;
+}
+
+.num_cols{
+    /* width: 30%; */
+    margin: 0.5% 25%;
+    padding: 2% 5%;
+    border: solid 3px white; 
+    border-radius: 20px;   
+}
+
+div.num_cols form table label { 
+    /* font-weight: bold; */
+        font-size: large;
+    color: white;
+}
+
+div.num_cols form button#id_num_cols{
+    border-radius: 10%;
+}
+
+div.num_cols form input#id_num_cols:hover{
+    background-color: #313131;
+    color: blanchedalmond;
+}
+
+.Col_dtls{
+    /* width: 30%; */
+    margin: 0.5% 25%;
+    padding: 2% 5%;
+    border: solid 3px white;   
+    border-radius: 20px; 
+}
+
+div.Col_dtls form table label { 
+    /* font-weight: bold; */
+    font-size: large;
+    color: white;
+}
+
+div.Col_dtls form button#id_col_dtls{
+    border-radius: 10%;
+}
+
+div.Col_dtls form input#id_col_dtls:hover{
+    background-color: #313131;
+    color: blanchedalmond;
+}
+ 
+.add_comment{
+    /* width: 30%; */
+    margin: 0.5% 25%;
+    padding: 2% 5%;
+    border: solid 3px white;   
+    border-radius: 20px; 
+}
+
+div.add_comment form table label { 
+    /* font-weight: bold; */
+    font-size: large;
+    color: white;
+}
+
+div.add_comment input{
+    border-radius: 10%;
+}
+
+div.add_comment input:hover{
+    background-color: #313131;
+    color: blanchedalmond;
+}
+
+.req_complete{
+   /* width: 30%; */
+    margin: 0.5% 17%;
+    padding: 2% 5%;
+    border: solid 3px white;   
+    border-radius: 20px; 
+
+}
+
+div.req_complete h1,h2{
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
+
+.Macro_Creation{
+    margin: 0% 30%;
+    padding: 2% 6%;
+    height: auto;
+    width: 40%;
+    border: solid 3px white;
+    border-radius: 20px;
+}
+
+div.Macro_Creation form table label
+{
+    /* font-weight: bold; */
+    font-size: medium;
+    color: white;
+
+}
+
+div.Macro_Creation form table tr td select{
+    margin: 0 10%;
+
+}
+
+div.Macro_Creation form table tr td input{
+    margin: 0 10%;
+}
+
+div.Macro_Creation form input#id_Macro_Generator:hover{
+    background-color: #313131;
+    color: blanchedalmond;
+}
+
+.home_logout{
+    padding: 2% 5%;
+    height: auto;
+}
+
+.home_logout ul{
+    list-style: none;
+    margin: 0% 5%;
+}
+
+.home_logout ul li{
+    display: inline;
+    margin: 0%;
+    padding: 2%;
+    border: solid 2px white;
+    background-color: white;
+    border-radius: 5%;
+
+}
+
+.home_logout ul li a{
+    color: #4b4b4b;
+    font-weight: bold;
+    text-decoration: none;
+}
