@@ -12,11 +12,11 @@ import zipfile
 
 code_file_path = os.getcwd()
 
-
 # Function to render Sign_In Page at front End.
 def sign_in_page(request):
     global logger, log_file, log_file_path, date_str
     date = datetime.datetime.now()
+    os.chdir(code_file_path)
     date_str = date.strftime('%Y%m%d_%H%M%S')
     log_file = 'CodeGenerator_LogFiles' + date_str + '.log'
     folder = './Files/LogFiles/'
@@ -201,7 +201,7 @@ def macro_details_page(request):
 
 def upload_src_file(request):
     if request.method == 'POST':
-        global filename, team, project, file
+        global filename, team, project, file,file_path
         logger.info('----------Collected Inputs about Flow to be changed: ----------')
         team = request.POST["team"]
         project = request.POST["project"]
@@ -215,6 +215,7 @@ def upload_src_file(request):
         file = project + "_" + layer + ".xlsx"
         filename = os.path.join(file_path, file)
         logger.info('----------FilesName with Path: {}'.format(filename))
+        os.chdir(code_file_path)
         return render(request, "Upload_Src_File.html", {'file': file})
 
 
@@ -224,10 +225,13 @@ def num_cols_page(request):
                 And Render Columns Details Page at Front End"""
 
     if request.method == 'POST':
+
         file_item = request.FILES['file']
+        os.chdir(file_path)
         with open(file_item.name, 'wb+') as destination:
             for chunk in file_item.chunks():
                 destination.write(chunk)
+        os.chdir(code_file_path)
         logger.info('----------Uploading File: {} ----------' .format(file_item.name))
         if os.path.isfile(filename):
             logger.info('----------{}----------'.format(filename))
@@ -296,6 +300,7 @@ def alter_table_func(list_of_cols, file_name):
 
     df = read_excel(file_name, sheet_name='Tables')
     list_of_tables = list(df['Table_Name'])
+    os.chdir(file_path)
     os.chdir('../TgtFiles')
     fp = os.getcwd()
     if len(list_of_tables) > 0:
@@ -775,7 +780,7 @@ def zip_download_package():
     for root, dirs, files in os.walk(zip_file_path + '/' + user_name):
         for file in files:
             zipper.write(os.path.join(root, file), os.path.relpath(os.path.join(root, file), os.path.join(rel_path, '..'
-                                                                                                          )))
+                                                                                                              )))
     zipper.close()
     os.chdir(code_file_path)
 
